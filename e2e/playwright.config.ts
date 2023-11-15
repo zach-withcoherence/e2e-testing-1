@@ -34,17 +34,32 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: { 
+        ...devices['Desktop Chrome'],
+        contextOptions: {
+          ignoreHTTPSErrors: true,
+        } 
+      },
     },
 
     {
       name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
+      use: { 
+        ...devices['Desktop Firefox'],
+        contextOptions: {
+          ignoreHTTPSErrors: true,
+        } 
+      },
     },
 
     {
       name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
+      use: { 
+        ...devices['Desktop Safari'],
+        contextOptions: {
+          ignoreHTTPSErrors: true,
+        } 
+      },
     },
 
     /* Test against mobile viewports. */
